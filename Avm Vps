@@ -1,0 +1,7 @@
+ CREATE USER avmuser WITH ENCRYPTED PASSWORD 'avmpassword';
+
+CREATE DATABASE avmdb OWNER avmuser;
+
+GRANT ALL PRIVILEGES ON DATABASE avmdb TO avmuser;
+
+DATABASE_URL=postgresql://avmuser:avmpassword@127.0.0.1:5432/avmdb

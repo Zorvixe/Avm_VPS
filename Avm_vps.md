@@ -31,4 +31,7 @@ ln -s /etc/nginx/sites-available/app.avmagrilifescience.com.conf /etc/nginx/site
 ln -s /etc/nginx/sites-available/api.avmagrilifescience.com.conf /etc/nginx/sites-enabled/
 ```
 
+```bash
+certbot --nginx -d avmagrilifescience.com -d www.avmagrilifescience.com -d app.avmagrilifescience.com -d api.avmagrilifescience.com
+```
 

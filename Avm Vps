@@ -1,7 +1,35 @@
- CREATE USER avmuser WITH ENCRYPTED PASSWORD 'avmpassword';
-
+```
+CREATE USER avmuser WITH ENCRYPTED PASSWORD 'avmpassword';
+```
+```
 CREATE DATABASE avmdb OWNER avmuser;
-
+```
+```
 GRANT ALL PRIVILEGES ON DATABASE avmdb TO avmuser;
-
+```
+```
 DATABASE_URL=postgresql://avmuser:avmpassword@127.0.0.1:5432/avmdb
+```
+
+```
+ nano /etc/nginx/sites-available/avmagrilifescience.com.conf
+```
+```
+ nano /etc/nginx/sites-available/app.avmagrilifescience.com.conf
+```
+```
+nano /etc/nginx/sites-available/api.avmagrilifescience.com.conf
+```
+
+```
+ln -s /etc/nginx/sites-available/avmagrilifescience.com.conf /etc/nginx/sites-enabled/
+```
+```
+ln -s /etc/nginx/sites-available/app.avmagrilifescience.com.conf /etc/nginx/sites-enabled/
+```
+```
+ln -s /etc/nginx/sites-available/api.avmagrilifescience.com.conf /etc/nginx/sites-enabled/
+```
+
+
+
